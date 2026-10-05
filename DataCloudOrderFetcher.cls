@@ -17,7 +17,7 @@ public without sharing class DataCloudOrderFetcher {
         String email = requestParam[0].customerEmail;
         
         List<Contact> contactRec =[Select Id,Title from Contact where Email =: email];
-        String ContactId = contactRec[0].Title;
+        String ContactId = contactRec[0].Id;
         List<ResponseWrapper> responses = new List<ResponseWrapper>();
         
         // query on UnifiedIndividualLinkRecord by using contactId
